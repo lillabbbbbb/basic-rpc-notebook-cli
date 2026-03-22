@@ -1,7 +1,7 @@
 import xmlrpc.client
 from colorama import init, Fore, Style
-import sys
 import shlex
+import sys
 
 # Initialize colorama
 init(autoreset=True)
@@ -97,6 +97,8 @@ def get_notes(topic, search_text=None):
             
             if(search_text == None):
                 print(Fore.CYAN + topic + Fore.RESET)
+            else:
+                print(+ topic)
             for note in notes:
                 if(search_text):
                     search = search_text.lower()
